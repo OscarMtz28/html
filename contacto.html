@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="imagenes/icono.ico">
-    
+    <link rel="icon" href="imagenes/icono.ico" />
+
     <title>Motocicletas</title>
   </head>
   <body>
-
-
-  <div class="header"></div>
-  <nav class="menu">
-      <a href="index.html"><img src="imagenes/menu_ico.png"></a>
+    <div class="header"></div>
+    <nav class="menu">
+      <a href="index.html"><img src="imagenes/menu_ico.png" /></a>
       <a href="productos.html">Productos</a>
       <a href="servicios.html">Servicios</a>
       <a href="contacto.html">Contacto</a>
-   </nav>
+    </nav>
 
-
-
-
+    <form action="post" class="contacto-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" /><br />
+      <label for="apellido">Apellido:</label>
+      <input type="text" name="apellido" id="apellido" /><br />
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" /><br />
+      <label for="telefono">Telefono:</label>
+      <input type="tel" name="telefono" id="telefono" /><br />
+      <label for="mensaje">Mensaje:</label>
+      <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea
+      ><br />
+      <button type="submit">Enviar</button>
+    </form>
   </body>
 </html>

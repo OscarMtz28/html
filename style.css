@@ -64,10 +64,10 @@ body {
 }
 
 .inicio2 {
- display: flex;
- margin: 0 auto;
- max-width: 1200px;
- gap: 50px;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 50px;
 
 }
 .inicio_texto {
@@ -105,3 +105,4 @@ color: #003459;
     object-fit: cover; 
     margin-bottom: 10px;
 }
+
