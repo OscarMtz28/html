@@ -2,58 +2,66 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="imagenes/icono.ico">
-    
+    <link rel="icon" href="imagenes/icono.ico" />
+    <script>
+      $(document).ready(function(){
+        $("#ocultar").click(function(){
+          $("#prod").slideDown();
+        });
+      });
+    </script>
     <title>Motocicletas</title>
   </head>
   <body>
-
-
-  <div class="header"></div>
-  <nav class="menu">
-      <a href="index.html"><img src="imagenes/menu_ico.png"></a>
+    <div class="header"></div>
+    <nav class="menu">
+      <a href="index.html"><img src="imagenes/menu_ico.png" /></a>
       <a href="productos.html">Productos</a>
       <a href="servicios.html">Servicios</a>
       <a href="contacto.html">Contacto</a>
-   </nav>
-
-<h1 class = "prodH1">Productos a la venta!!</h1>
-
-<section class="productos">
-
-    <article class="producto">
-        <img src="imagenes/675SR-R_Aerolite Grey_Left 45 WEB.avif" alt="Imagen de cfMoto">
+    </nav>
+<div id="ocultar" class="ocultar">
+    <h1 class="prodH1">Productos a la venta!!</h1>
+</div>
+<div id="prod" class="prod">
+    <section class="productos">
+      <article class="producto">
+        <img
+          src="imagenes/675SR-R_Aerolite Grey_Left 45 WEB.avif"
+          alt="Imagen de cfMoto"
+        />
         <h3>CF-moto 675 SR-R</h3>
         <p>Motocicleta deportiva de 675 cc.</p>
         <strong>Desde: $168,880</strong>
-    </article>
+      </article>
 
-        <article class="producto">
-        <img src="imagenes/kawasaki.png" alt="Imagen de kawasaki">
+      <article class="producto">
+        <img src="imagenes/kawasaki.png" alt="Imagen de kawasaki" />
         <h3>Ninja ZX-6r KRT Edition</h3>
         <p>Motocicleta deportiva de 636 cc.</p>
         <strong>Desde: $255,490</strong>
-    </article>
+      </article>
 
-    <article class="producto">
-        <img src="imagenes/honda.png" alt="Imagen de hondaCBR">
+      <article class="producto">
+        <img src="imagenes/honda.png" alt="Imagen de hondaCBR" />
         <h3>HondaCBR 600 rr</h3>
         <p>Motocicleta deportiva de 600 cc.</p>
         <strong>Desde: $279,990</strong>
-    </article>
+      </article>
 
-    <article class="producto">
-        <img src="imagenes/panigale2.png" alt="Imagen de QJmoto">
+      <article class="producto">
+        <img src="imagenes/panigale2.png" alt="Imagen de QJmoto" />
         <h3>Panigale V2 MM93</h3>
         <p>Motocicleta deportiva de 890 cc.</p>
         <strong>Desde: $523,900</strong>
-    </article>
-
-
-</section>
-
-
+      </article>
+    </section>
+</div>
+    <footer class="footer">
+      <p>&copy; 2025 Motocicletas. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>

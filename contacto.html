@@ -2,9 +2,50 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="imagenes/icono.ico" />
+    <script src="plugins/raty.js"></script>
+    <link rel="stylesheet" href="plugins/raty.css" />
+    <script>
+      $(document).ready(function () {
+        $("#raty").raty({
+          number: 5,
+          starType: "i",
+          path: "plugins",
+          target: "#hint",
+          targetText: "--",
+        });
+
+        $(".contacto-form").on("submit", function (e) {
+          e.preventDefault();
+          $(".modal-overlay").css("display", "flex");
+        });
+
+        $(".close-button").on("click", function () {
+          $(".modal-overlay").hide();
+        });
+
+        $(".modal-overlay").on("click", function (e) {
+          if (e.target === this) {
+            $(this).hide();
+          }
+        });
+        $("input").focus(function(){
+          $(this).css("border-color", "#8338ec");
+        });
+        $("input").blur(function(){
+          $(this).css("background-color", "#bde0fe");
+        });
+        $("textarea").focus(function(){
+          $(this).css("border-color", "#8338ec");
+        });
+        $("textarea").blur(function(){
+          $(this).css("background-color", "#bde0fe");
+        });
+      });
+    </script>
 
     <title>Motocicletas</title>
   </head>
@@ -17,7 +58,7 @@
       <a href="contacto.html">Contacto</a>
     </nav>
 
-    <form action="post" class="contacto-form">
+    <form class="contacto-form">
       <label for="nombre">Nombre:</label>
       <input type="text" name="nombre" id="nombre" /><br />
       <label for="apellido">Apellido:</label>
@@ -31,5 +72,16 @@
       ><br />
       <button type="submit">Enviar</button>
     </form>
+    <div class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3>Califica nuestro servicio</h3>
+        <div id="raty"></div>
+        <div id="hint"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2025 Motocicletas. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>

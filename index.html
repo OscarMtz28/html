@@ -5,14 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="imagenes/icono.ico" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="plugins/Floating-WhatsApp-Message-Button-jQuery/floating-wpp.min.css"
+    />
+    <script src="plugins/Floating-WhatsApp-Message-Button-jQuery/floating-wpp.min.js"></script>
 
+    <script>
+      $(function () {
+        $(".floating-wpp").floatingWhatsApp({
+          phone: "5493515222222",
+          popupMessage: "Bienvenido a nuestra tienda de motocicletas",
+          showPopup: true,
+          message: "Hola, ¿en qué puedo ayudarte?",
+          headerTitle: "Motocicletas",
+        });
+      });
+    </script>
     <title>Motocicletas</title>
   </head>
   <body>
     <div class="header"></div>
     <nav class="menu">
       <a href="index.html"><img src="imagenes/menu_ico.png" /></a>
-      <a href="productos.html">Productosos</a>
+      <a href="productos.html">Productos</a>
       <a href="servicios.html">Servicios</a>
       <a href="contacto.html">Contacto</a>
     </nav>
@@ -37,5 +58,10 @@
         </div>
       </div>
     </section>
+    <div class="floating-wpp"></div>
+
+    <footer class="footer">
+      <p>&copy; 2025 Motocicletas. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
